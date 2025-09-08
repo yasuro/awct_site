@@ -69,17 +69,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > 100) {
+        if (scrollTop > 50) {
             header.classList.add('scrolled');
         } else {
             header.classList.remove('scrolled');
-        }
-        
-        // スクロール方向の検出
-        if (scrollTop > lastScrollTop && scrollTop > 200) {
-            header.style.transform = 'translateY(-100%)';
-        } else {
-            header.style.transform = 'translateY(0)';
         }
         
         lastScrollTop = scrollTop;
@@ -182,7 +175,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         .header.scrolled {
             padding: 0.5rem 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .header.scrolled .nav-menu a {
+            color: rgba(255, 255, 255, 0.95);
         }
         
         .animate-in {
