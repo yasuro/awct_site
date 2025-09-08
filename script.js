@@ -150,15 +150,47 @@ document.addEventListener('DOMContentLoaded', function() {
             top: 70px;
             left: 0;
             right: 0;
-            background: white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 1rem;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            padding: 2rem 1rem;
             z-index: 999;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .nav-menu.active ul {
             flex-direction: column;
-            gap: 1rem;
+            gap: 1.5rem;
+        }
+        
+        .nav-menu.active a {
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-shadow: none;
+            font-size: 1.1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+        
+        .nav-menu.active a:hover {
+            color: var(--accent-light) !important;
+            transform: translateX(10px);
+        }
+        
+        .nav-menu.active .cta-button {
+            background: var(--gradient-primary) !important;
+            color: var(--white) !important;
+            text-align: center;
+            padding: 1rem 2rem !important;
+            border-radius: 50px;
+            border: none !important;
+            box-shadow: 0 4px 20px rgba(0, 102, 255, 0.4);
+        }
+        
+        .nav-menu.active .cta-button:hover {
+            background: var(--primary-color) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(0, 102, 255, 0.6);
         }
         
         .mobile-menu-toggle.active span:nth-child(1) {
