@@ -1,0 +1,97 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Thumbnails
+Thumbs.db
+ehthumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.claude/
+
+# Original/backup images (大きいサイズのオリジナル画像)
+*_original.jpeg
+*_original.jpg
+*_original.png
+*.psd
+*.ai
+*.sketch
+*.fig
+
+# PDFドキュメント (内部資料)
+*.pdf
+
+# ログファイル
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 依存関係ディレクトリ（将来的にnpmを使う場合）
+node_modules/
+bower_components/
+
+# ビルド出力（将来的にビルドツールを使う場合）
+dist/
+build/
+.cache/
+
+# 環境設定ファイル
+.env
+.env.local
+.env.*.local
+config.local.js
+
+# テンポラリファイル
+*.tmp
+*.temp
+.temp/
+.tmp/
+
+# バックアップファイル
+*.bak
+*.backup
+*.old
+
+# OS generated files
+Desktop.ini
+$RECYCLE.BIN/
+
+# Python (ローカルサーバー用)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# 圧縮ファイル
+*.zip
+*.rar
+*.tar
+*.gz
+*.7z
+
+# データベース
+*.sql
+*.sqlite
+*.db
+
+# その他の不要ファイル
+*.map
+.sass-cache/
