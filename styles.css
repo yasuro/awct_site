@@ -1062,11 +1062,26 @@ section {
 }
 
 /* テキスト要素の改行最適化 */
-p, h1, h2, h3, h4, h5, h6, li, td, th, span, div {
-    word-break: keep-all;
-    overflow-wrap: anywhere;
-    line-break: strict;
-    word-wrap: break-word;
+* {
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
+    line-break: strict !important;
+    word-wrap: break-word !important;
+    -webkit-line-break: after-white-space !important;
+    -ms-word-break: keep-all !important;
+    -webkit-hyphens: none !important;
+    -ms-hyphens: none !important;
+    hyphens: none !important;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
+    word-break: keep-all !important;
+    overflow-wrap: anywhere !important;
+    line-break: strict !important;
+    word-wrap: break-word !important;
+    -webkit-line-break: after-white-space !important;
+    -ms-word-break: keep-all !important;
+    white-space: normal !important;
 }
 
 /* ボタンテキストの最適化 */
