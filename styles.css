@@ -30,6 +30,21 @@ body {
     color: var(--text-color);
     background-color: var(--white);
     word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    word-wrap: break-word;
+}
+
+/* 日本語テキストの最適化 */
+* {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+}
+
+/* 英語の長い単語は適切に改行 */
+:lang(en) {
+    word-break: break-word;
     overflow-wrap: break-word;
 }
 
@@ -205,6 +220,8 @@ body {
     text-transform: uppercase;
     text-shadow: 0 2px 10px rgba(0, 180, 216, 0.5);
     animation: glow 2s ease-in-out infinite alternate;
+    word-break: normal;
+    overflow-wrap: normal;
 }
 
 .main-title {
@@ -215,6 +232,9 @@ body {
     margin-bottom: 1rem;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     letter-spacing: -1px;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
 }
 
 .hero-tagline {
@@ -224,6 +244,9 @@ body {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
     font-weight: 300;
     letter-spacing: 1px;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
 }
 
 .hero-cta {
@@ -286,6 +309,9 @@ section {
     margin-bottom: 1rem;
     position: relative;
     display: inline-block;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
 }
 
 .section-header h2::after {
@@ -304,6 +330,9 @@ section {
     color: var(--text-color);
     opacity: 0.8;
     margin-top: 1.5rem;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
 }
 
 /* 企業理念セクション */
@@ -1032,6 +1061,73 @@ section {
     }
 }
 
+/* テキスト要素の改行最適化 */
+p, h1, h2, h3, h4, h5, h6, li, td, th, span, div {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    word-wrap: break-word;
+}
+
+/* ボタンテキストの最適化 */
+.primary-button, .secondary-button, .cta-button {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    white-space: nowrap;
+}
+
+/* テーブル内テキストの最適化 */
+.about-table th,
+.about-table td {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    hyphens: none;
+}
+
+/* カード内テキストの最適化 */
+.philosophy-item p,
+.challenge-item p,
+.feature-content p,
+.flow-content p,
+.pricing-card p {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+/* タイトルの最適化 */
+.philosophy-item h3,
+.challenge-item h3,
+.feature-content h3,
+.flow-content h3,
+.pricing-card h3 {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+}
+
+/* メッセージテキストの最適化 */
+.challenges-message p,
+.features-message p {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    text-align: center;
+}
+
+/* CTAセクションの最適化 */
+.cta-content h2,
+.cta-subtitle,
+.cta-message {
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+}
+
 /* レスポンシブデザイン */
 @media (max-width: 768px) {
     .nav-menu {
@@ -1048,22 +1144,29 @@ section {
     
     .hero-title .main-title {
         font-size: 2.5rem;
-        line-height: 1.2;
+        line-height: 1.3;
         word-break: keep-all;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
+        line-break: strict;
+        text-align: center;
     }
     
     .hero-title .subtitle {
         font-size: 1.2rem;
         word-spacing: 0.1em;
         letter-spacing: 2px;
+        word-break: normal;
+        overflow-wrap: normal;
+        white-space: nowrap;
     }
     
     .hero-tagline {
         font-size: 1rem;
-        line-height: 1.6;
+        line-height: 1.7;
         word-break: keep-all;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
+        line-break: strict;
+        text-align: center;
     }
     
     .section-header h2 {
