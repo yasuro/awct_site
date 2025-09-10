@@ -30,7 +30,7 @@ body {
     color: var(--text-color);
     background-color: var(--white);
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
     word-wrap: break-word;
 }
@@ -38,7 +38,7 @@ body {
 /* 日本語テキストの最適化 */
 * {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -233,7 +233,7 @@ body {
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     letter-spacing: -1px;
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -245,7 +245,7 @@ body {
     font-weight: 300;
     letter-spacing: 1px;
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -310,7 +310,7 @@ section {
     position: relative;
     display: inline-block;
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -331,7 +331,7 @@ section {
     opacity: 0.8;
     margin-top: 1.5rem;
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -1064,7 +1064,7 @@ section {
 /* テキスト要素の改行最適化 */
 * {
     word-break: keep-all !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
     line-break: strict !important;
     word-wrap: break-word !important;
     -webkit-line-break: after-white-space !important;
@@ -1076,7 +1076,7 @@ section {
 
 p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     word-break: keep-all !important;
-    overflow-wrap: anywhere !important;
+    overflow-wrap: break-word !important;
     line-break: strict !important;
     word-wrap: break-word !important;
     -webkit-line-break: after-white-space !important;
@@ -1087,7 +1087,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 /* ボタンテキストの最適化 */
 .primary-button, .secondary-button, .cta-button {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
     white-space: nowrap;
 }
@@ -1096,7 +1096,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 .about-table th,
 .about-table td {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
     hyphens: none;
 }
@@ -1108,10 +1108,19 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 .flow-content p,
 .pricing-card p {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
-    text-align: justify;
-    text-justify: inter-ideograph;
+}
+
+/* サービス特長のテキストは左揃えでスペース調整なし */
+.feature-content p {
+    text-align: left;
+    word-spacing: normal !important;
+    letter-spacing: normal !important;
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    line-break: strict !important;
+    line-height: 1.6 !important;
 }
 
 /* タイトルの最適化 */
@@ -1121,7 +1130,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 .flow-content h3,
 .pricing-card h3 {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -1129,7 +1138,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 .challenges-message p,
 .features-message p {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
     text-align: center;
 }
@@ -1139,7 +1148,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
 .cta-subtitle,
 .cta-message {
     word-break: keep-all;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     line-break: strict;
 }
 
@@ -1161,7 +1170,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         font-size: 2.5rem;
         line-height: 1.3;
         word-break: keep-all;
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
         line-break: strict;
         text-align: center;
     }
@@ -1179,7 +1188,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         font-size: 1rem;
         line-height: 1.7;
         word-break: keep-all;
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
         line-break: strict;
         text-align: center;
     }
