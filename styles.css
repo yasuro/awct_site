@@ -982,6 +982,12 @@ section {
     background: transparent;
     border: 2px solid var(--white);
     color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    display: inline-block;
 }
 
 .cta-section .secondary-button:hover {
@@ -1172,9 +1178,10 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     }
     
     .container {
-        padding: 0 15px;
+        padding: 0 10px;
         width: 100%;
-        max-width: 100vw;
+        max-width: calc(100vw - 20px);
+        margin: 0 auto;
     }
     
     /* セクションの調整 */
@@ -1182,6 +1189,24 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         width: 100%;
         max-width: 100vw;
         overflow-x: hidden;
+        padding: 3rem 0;
+    }
+    
+    /* セクションヘッダーの調整 */
+    .section-header {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        padding: 0 10px;
+    }
+    
+    .section-header p {
+        font-size: 0.95rem;
+        padding: 0 10px;
     }
     .nav-menu {
         display: none;
@@ -1192,16 +1217,20 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     }
     
     .hero-content {
-        padding: 1rem;
+        padding: 0 10px;
+        text-align: center;
+        width: 100%;
+        max-width: calc(100vw - 20px);
     }
     
     .hero-title .main-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         line-height: 1.3;
         word-break: keep-all;
         overflow-wrap: break-word;
         line-break: strict;
         text-align: center;
+        padding: 0 5px;
     }
     
     .hero-title .subtitle {
@@ -1252,6 +1281,15 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     
     .challenges-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .challenge-item {
+        padding: 1.5rem;
+        margin: 0;
+        width: 100%;
+        max-width: none;
     }
     
     .challenge-item h3 {
@@ -1271,6 +1309,19 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     .features-content {
         grid-template-columns: 1fr;
         gap: 2rem;
+        padding: 0 5px;
+    }
+    
+    .features-list {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .feature-item {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        max-width: none;
     }
     
     .features-image {
@@ -1297,24 +1348,43 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     
     .philosophy-text {
         grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .philosophy-item {
+        padding: 1.5rem 1rem;
+        margin: 0 5px;
+        width: calc(100% - 10px);
+        max-width: calc(100vw - 30px);
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+    }
+    
+    .philosophy-icon {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 1rem;
     }
     
     .philosophy-item h3 {
-        font-size: 1.2rem;
-        line-height: 1.4;
-        word-break: keep-all;
-        overflow-wrap: break-word;
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
     }
     
     .philosophy-item p {
-        font-size: 0.95rem;
-        line-height: 1.8;
-        word-break: keep-all;
-        overflow-wrap: break-word;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        padding: 0 5px;
     }
     
+    
     .flow-timeline {
-        padding: 0 10px;
+        padding: 0 5px;
+        max-width: 100%;
+        overflow-x: hidden;
     }
     
     .flow-timeline::before {
@@ -1324,6 +1394,15 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     .flow-item {
         margin-bottom: 2rem;
         padding-right: 0;
+        padding-left: 60px;
+        width: 100%;
+        max-width: calc(100vw - 80px);
+    }
+    
+    .flow-content {
+        padding: 1.5rem;
+        width: 100%;
+        max-width: none;
     }
     
     .flow-number {
@@ -1355,6 +1434,15 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     
     .pricing-content {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 5px;
+    }
+    
+    .pricing-card {
+        padding: 2rem 1.5rem;
+        margin: 0;
+        width: 100%;
+        max-width: none;
     }
     
     .pricing-card h3 {
@@ -1399,13 +1487,37 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         gap: 1rem;
         align-items: center;
         justify-content: center;
+        padding: 0 10px;
+        width: 100%;
+        max-width: calc(100vw - 20px);
     }
     
     .hero-cta .primary-button,
     .hero-cta .secondary-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         text-align: center;
+        padding: 15px 20px;
+    }
+    
+    
+    /* 会社概要テーブルの調整 */
+    .about-content {
+        padding: 0 5px;
+    }
+    
+    .about-table {
+        font-size: 0.9rem;
+        width: 100%;
+        max-width: calc(100vw - 30px);
+        margin: 0 auto;
+    }
+    
+    .about-table th,
+    .about-table td {
+        padding: 1rem 0.75rem;
+        word-break: keep-all;
+        overflow-wrap: break-word;
     }
     
     .cta-buttons {
@@ -1413,13 +1525,35 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         gap: 1rem;
         align-items: center;
         justify-content: center;
+        padding: 0 10px;
+        width: 100%;
+        max-width: calc(100vw - 20px);
     }
     
     .cta-buttons .primary-button,
     .cta-buttons .secondary-button {
         width: 100%;
-        max-width: 300px;
+        max-width: 280px;
         text-align: center;
+        padding: 15px 20px;
+        font-size: 1rem;
+        min-height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* フッターの調整 */
+    .footer-content {
+        padding: 2rem 10px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+        padding: 0 10px;
     }
 }
 
