@@ -772,11 +772,15 @@ section {
 .flow-content {
     flex: 1;
     background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
+    padding: 2rem;
     border-radius: 15px;
     transition: var(--transition);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .flow-content:hover {
@@ -788,13 +792,17 @@ section {
 
 .flow-content h3 {
     color: var(--secondary-color);
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.3;
 }
 
 .flow-content p {
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 1.7;
+    font-size: 1rem;
+    margin: 0;
 }
 
 /* 契約体系セクション */
@@ -1512,7 +1520,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     
     .flow-item {
         display: flex;
-        gap: 1rem;
+        gap: 0.75rem;
         margin-bottom: 2rem;
         padding: 0 15px;
         width: 100%;
@@ -1529,6 +1537,22 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         width: auto;
         max-width: none;
         box-sizing: border-box;
+        min-height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .flow-content h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: 0.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .flow-content p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
     }
     
     .flow-number {
@@ -1795,8 +1819,19 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     .flow-content {
         flex: 1 !important;
         width: auto !important;
-        padding: 1rem !important;
+        padding: 1.25rem !important;
         margin-left: 0 !important;
+        min-height: 90px !important;
+    }
+    
+    .flow-content h3 {
+        font-size: 1rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+    
+    .flow-content p {
+        font-size: 0.85rem !important;
+        line-height: 1.4 !important;
     }
     
     .flow-item {
