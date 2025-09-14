@@ -3,7 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>願いが叶う株式会社 | 人材紹介サービス</title>
+    
+    <!-- SEO基本タグ -->
+    <title>中小企業専門人材紹介 | 願いが叶う株式会社 - 理想の人材が見つかる採用支援</title>
+    <meta name="description" content="中小企業の採用課題を解決する専門人材紹介サービス。価値観重視のマッチングで定着率向上を実現。採用から入社後フォローまで総合支援。無料相談受付中。" />
+    <meta name="keywords" content="人材紹介,中小企業,採用支援,転職,求人,人材派遣,採用コンサルティング,定着率,マッチング,人事" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="願いが叶う株式会社" />
+    <meta name="language" content="ja" />
+    
+    <!-- OGP・SNS共有用メタタグ -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="中小企業専門人材紹介 | 願いが叶う株式会社" />
+    <meta property="og:description" content="中小企業の採用課題を解決する専門人材紹介サービス。価値観重視のマッチングで定着率向上を実現。" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="願いが叶う株式会社" />
+    <meta property="og:image" content="hero_original.jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="中小企業専門人材紹介 | 願いが叶う株式会社" />
+    <meta name="twitter:description" content="中小企業の採用課題を解決する専門人材紹介サービス。価値観重視のマッチングで定着率向上を実現。" />
+    <meta name="twitter:image" content="hero_original.jpeg" />
+    
+    <!-- 構造化データ用JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "願いが叶う株式会社",
+      "alternateName": "A wish comes true",
+      "description": "中小企業専門の人材紹介サービスを提供。価値観重視のマッチングで定着率向上を実現。",
+      "url": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "logo.png",
+        "width": "200",
+        "height": "60"
+      },
+      "foundingDate": "2025",
+      "slogan": "関わる全ての人々の豊かさと幸せを第一に考え行動し願い叶える",
+      "serviceType": ["人材紹介", "採用支援", "人材コンサルティング"],
+      "areaServed": "JP",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "availableLanguage": "Japanese",
+        "url": "https://lin.ee/wNbHhZE"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "JP"
+      },
+      "sameAs": [
+        "https://lin.ee/wNbHhZE"
+      ],
+      "offers": {
+        "@type": "Service",
+        "name": "人材紹介サービス",
+        "description": "成功報酬制の人材紹介サービス。入職まで費用は一切発生しません。",
+        "provider": {
+          "@type": "Organization",
+          "name": "願いが叶う株式会社"
+        }
+      }
+    }
+    </script>
+    
+    <!-- ファビコン -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    
+    <!-- プリロード・プリコネクト -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- CSS・フォント -->
     <link rel="stylesheet" href="styles.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&display=swap"
@@ -12,13 +90,13 @@
   </head>
   <body>
     <!-- ヘッダー -->
-    <header class="header">
+    <header class="header" role="banner">
       <div class="container">
         <div class="header-content">
           <div class="logo">
             <img src="logo.png" alt="願いが叶う株式会社" />
           </div>
-          <nav class="nav-menu">
+          <nav class="nav-menu" role="navigation" aria-label="メインナビゲーション">
             <ul>
               <li><a href="#about">会社概要</a></li>
               <li><a href="#service">サービス</a></li>
@@ -43,8 +121,10 @@
       </div>
     </header>
 
-    <!-- ヒーローセクション -->
-    <section class="hero">
+    <!-- メインコンテンツ -->
+    <main role="main">
+      <!-- ヒーローセクション -->
+      <section class="hero" aria-label="メインビジュアル">
       <div class="hero-background"></div>
       <div class="container">
         <div class="hero-content">
@@ -68,10 +148,10 @@
       </div>
     </section>
 
-    <!-- 企業理念セクション -->
-    <section id="philosophy" class="philosophy">
+      <!-- 企業理念セクション -->
+      <section id="philosophy" class="philosophy" aria-label="企業理念">
       <div class="philosophy-background">
-        <img src="01.jpeg" alt="企業理念" class="philosophy-bg-image" />
+        <img src="01.jpeg" alt="企業理念を表すビジョンとミッション" class="philosophy-bg-image" loading="lazy" />
         <div class="philosophy-overlay"></div>
       </div>
       <div class="container">
@@ -150,7 +230,7 @@
     </section>
 
     <!-- 採用課題セクション -->
-    <section id="challenges" class="challenges">
+      <section id="challenges" class="challenges" aria-label="採用課題">
       <div class="container">
         <div class="section-header">
           <h2>中小企業の採用課題</h2>
@@ -205,7 +285,7 @@
     </section>
 
     <!-- サービス特長セクション -->
-    <section id="features" class="features">
+      <section id="features" class="features" aria-label="サービス特長">
       <div class="container">
         <div class="features-content">
           <div class="features-text">
@@ -309,9 +389,9 @@
     </section>
 
     <!-- サービスの流れセクション -->
-    <section id="flow" class="flow">
+      <section id="flow" class="flow" aria-label="サービスの流れ">
       <div class="flow-background">
-        <img src="03.jpeg" alt="サービスの流れ" class="flow-bg-image" />
+        <img src="03.jpeg" alt="サービス利用の流れとプロセス" class="flow-bg-image" loading="lazy" />
         <div class="flow-overlay"></div>
       </div>
       <div class="container">
@@ -375,7 +455,7 @@
     </section>
 
     <!-- 契約体系セクション -->
-    <section id="pricing" class="pricing">
+      <section id="pricing" class="pricing" aria-label="契約体系">
       <div class="container">
         <div class="section-header">
           <h2>ご契約体系</h2>
@@ -424,7 +504,7 @@
     </section>
 
     <!-- 会社概要セクション -->
-    <section id="about" class="about">
+      <section id="about" class="about" aria-label="会社概要">
       <div class="container">
         <div class="section-header">
           <h2>会社概要</h2>
@@ -453,7 +533,7 @@
     </section>
 
     <!-- CTAセクション -->
-    <section id="contact" class="cta-section">
+      <section id="contact" class="cta-section" aria-label="お問い合わせ">
       <div class="container">
         <div class="cta-content">
           <h2>理想の人材像がわからない<br />求人を出しても来ない</h2>
@@ -475,9 +555,10 @@
         </div>
       </div>
     </section>
+    </main>
 
     <!-- フッター -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
