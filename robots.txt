@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# 画像ファイルのクロール許可
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# CSSとJavaScriptファイルのクロール許可
+Allow: /*.css$
+Allow: /*.js$
+
+# サイトマップの場所
+Sitemap: https://awct.jp/sitemap.xml
+
+# クロール頻度の調整（推奨設定）
+Crawl-delay: 1
