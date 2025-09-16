@@ -14,7 +14,7 @@ Allow: /*.css$
 Allow: /*.js$
 
 # サイトマップの場所
-Sitemap: https://awct.jp/sitemap.xml
+Sitemap: https://negaikanau.co.jp/sitemap.xml
 
 # クロール頻度の調整（推奨設定）
 Crawl-delay: 1
