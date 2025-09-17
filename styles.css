@@ -1492,8 +1492,9 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     }
     
     .features-message {
-        padding: 0 15px;
+        padding: 2rem 15px 0;
         font-size: 1rem !important;
+        margin-top: 1.5rem;
     }
     
     .feature-content {
@@ -1942,5 +1943,50 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     .about-table td {
         padding: 0.8rem 0.5rem;
         font-size: 0.9rem;
+    }
+    
+    /* 日本語テキストの改行処理（iPhone対応） */
+    p, h1, h2, h3, h4, h5, h6, li, span, div {
+        word-break: auto !important;
+        line-break: auto !important;
+        -webkit-line-break: auto !important;
+        overflow-wrap: break-word !important;
+        -webkit-hyphens: auto !important;
+        hyphens: auto !important;
+    }
+    
+    /* 読点での改行を許可 */
+    .philosophy-card p,
+    .challenge-item p,
+    .feature-content p,
+    .flow-content p,
+    .section-header p,
+    .challenges-message p,
+    .features-message p,
+    .pricing-note {
+        word-break: break-all !important;
+        line-break: anywhere !important;
+        -webkit-line-break: anywhere !important;
+    }
+    
+    /* iOS Safari用の追加設定 */
+    @supports (-webkit-touch-callout: none) {
+        p, h1, h2, h3, h4, h5, h6, li, span, div {
+            word-break: break-word !important;
+            -webkit-word-break: break-word !important;
+            word-wrap: break-word !important;
+            -webkit-word-wrap: break-word !important;
+        }
+        
+        .philosophy-card p,
+        .challenge-item p,
+        .feature-content p,
+        .flow-content p,
+        .section-header p {
+            word-break: normal !important;
+            -webkit-word-break: normal !important;
+            line-break: loose !important;
+            -webkit-line-break: loose !important;
+        }
     }
 }
