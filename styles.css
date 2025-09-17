@@ -548,7 +548,7 @@ section {
 /* デスクトップ用スタイル */
 .challenge-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
@@ -1381,9 +1381,9 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         display: -webkit-box !important;
         display: -webkit-flex !important;
         display: flex !important;
-        -webkit-box-align: start !important;
-        -webkit-align-items: flex-start !important;
-        align-items: flex-start !important;
+        -webkit-box-align: center !important;
+        -webkit-align-items: center !important;
+        align-items: center !important;
         gap: 0.75rem !important;
         margin-bottom: 1rem !important;
     }
@@ -1836,6 +1836,7 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     
     .challenge-header {
         display: flex !important;
+        align-items: center !important;
         gap: 0.5rem !important;
     }
     
