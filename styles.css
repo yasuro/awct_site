@@ -28,10 +28,13 @@ html {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--white);
@@ -42,6 +45,9 @@ body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100vw;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
 }
 
 /* 日本語テキストの最適化 */
@@ -49,6 +55,8 @@ body {
     word-break: keep-all;
     overflow-wrap: break-word;
     line-break: strict;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
 }
 
 /* 英語の長い単語は適切に改行 */
@@ -63,6 +71,7 @@ body {
     padding: 0 20px;
     width: 100%;
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 /* ヘッダー */
@@ -274,6 +283,10 @@ body {
     font-weight: 600;
     transition: var(--transition);
     display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .primary-button {
@@ -1195,12 +1208,33 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     line-break: strict;
 }
 
+/* iOS Safari向けの修正 */
+@supports (-webkit-touch-callout: none) {
+    /* iOS Safari特有の修正 */
+    body {
+        -webkit-overflow-scrolling: touch;
+        position: relative;
+    }
+    
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+    /* iOS向けフォント最適化 */
+    * {
+        -webkit-font-feature-settings: "palt" 1;
+        font-feature-settings: "palt" 1;
+    }
+}
+
 /* レスポンシブデザイン - モバイル表示領域の確保 */
 @media (max-width: 768px) {
     /* 全体の幅制御 */
     * {
         max-width: 100vw;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
     }
     
     .container {
@@ -1279,7 +1313,9 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         letter-spacing: 2px;
         word-break: normal;
         overflow-wrap: normal;
-        white-space: nowrap;
+        white-space: normal;
+        display: block;
+        text-align: center;
     }
     
     .hero-tagline {
@@ -1342,7 +1378,11 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     }
     
     .challenge-header {
+        display: -webkit-box !important;
+        display: -webkit-flex !important;
         display: flex !important;
+        -webkit-box-align: start !important;
+        -webkit-align-items: flex-start !important;
         align-items: flex-start !important;
         gap: 0.75rem !important;
         margin-bottom: 1rem !important;
@@ -1405,7 +1445,15 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         transform: none !important;
+        -webkit-transform: none !important;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
     }
     
     .feature-item:hover {
@@ -1529,6 +1577,8 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     }
     
     .flow-item {
+        display: -webkit-box;
+        display: -webkit-flex;
         display: flex;
         gap: 0.75rem;
         margin-bottom: 2rem;
@@ -1536,7 +1586,10 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         width: 100%;
         max-width: none;
         box-sizing: border-box;
+        -webkit-box-sizing: border-box;
         position: relative;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
         align-items: flex-start;
     }
     
