@@ -1962,11 +1962,20 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
     .flow-content p,
     .section-header p,
     .challenges-message p,
-    .features-message p,
-    .pricing-note {
+    .features-message p {
         word-break: break-all !important;
         line-break: anywhere !important;
         -webkit-line-break: anywhere !important;
+    }
+    
+    /* 料金注記の改行処理を最適化 */
+    .pricing-note {
+        word-break: auto !important;
+        line-break: loose !important;
+        -webkit-line-break: loose !important;
+        overflow-wrap: break-word !important;
+        word-wrap: break-word !important;
+        white-space: normal !important;
     }
     
     /* iOS Safari用の追加設定 */
@@ -1982,7 +1991,8 @@ p, h1, h2, h3, h4, h5, h6, li, td, th, span, div, a, button {
         .challenge-item p,
         .feature-content p,
         .flow-content p,
-        .section-header p {
+        .section-header p,
+        .pricing-note {
             word-break: normal !important;
             -webkit-word-break: normal !important;
             line-break: loose !important;
