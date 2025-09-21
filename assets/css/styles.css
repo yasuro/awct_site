@@ -186,7 +186,7 @@ body {
     align-items: center;
     overflow: hidden;
     margin-top: 0;
-    background-image: url('hero.jpeg');
+    background-image: url('../images/hero.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
